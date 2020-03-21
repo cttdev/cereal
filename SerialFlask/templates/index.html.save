@@ -60,7 +60,6 @@
             main.appendChild(data);
 
             document.getElementById("demo").appendChild(main);
-	    main.scrollIntoView();
         }
 	}
 
@@ -148,13 +147,14 @@
     </div>
 </div>
 
-<div class="jumbotron" id="demo" style="overflow: auto; height:500px;">
-</div>
+
+
 
 <div class="input-group mb-3">
     <input id="input" name="text" class="form-control">
     <button type="button" class="btn btn-primary" onclick="submitFunction()">Send</button>
 </div>
+
 
 </body>
 </html>

@@ -10,7 +10,7 @@ import io
 
 app = Flask(__name__)
 
-SERIAL_PORT = 'COM3'
+SERIAL_PORT = '/dev/ttyUSB0'
 SERIAL_RATE = 115200
 
 sendData = ""
@@ -127,4 +127,4 @@ def connect():
 	return text
 
 if __name__ == "__main__":
-	app.run(port=80) #host='0.0.0.0',
+	app.run(port=80, host='0.0.0.0') #host='0.0.0.0',
