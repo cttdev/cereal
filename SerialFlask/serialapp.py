@@ -93,6 +93,15 @@ def my_form_post():
 	print("Read " + text)
 	return text
 
+@app.route('/ctrlC', methods = ['POST'])
+def ctrlC():
+	global interrupt
+
+	if not interrupt:
+		ser.write('\x03')
+
+	print("Control + C")
+	return "ctrlC"
 
 @app.route('/connect', methods = ['POST'])
 def connect():

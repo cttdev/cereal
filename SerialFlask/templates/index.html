@@ -129,6 +129,20 @@
         xhr.send(JSON.stringify({selected: selected}));
     }
 
+    function ctrlC(event) {
+        var xhr = new XMLHttpRequest();
+        console.log("ctrlC");
+        xhr.open("POST", '/ctrlC', true);
+    }
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            console.log("Submit");
+            event.preventDefault();
+            submitFunction();
+        }
+    });
+
 	</script>
 
 </head>
@@ -153,7 +167,8 @@
 
 <div class="input-group mb-3">
     <input id="input" name="text" class="form-control">
-    <button type="button" class="btn btn-primary" onclick="submitFunction()">Send</button>
+    <button type="button" class="btn btn-primary ml-1" onclick="submitFunction()">Send</button>
+    <button type="button" class="btn btn-info ml-1 mr-1" onclick="ctrlC()">Ctrl C</button>
 </div>
 
 </body>
