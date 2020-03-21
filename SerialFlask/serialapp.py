@@ -98,7 +98,7 @@ def ctrlC():
 	global interrupt
 
 	if not interrupt:
-		ser.write('\x03')
+		ser.write(('\x03\n').encode())
 
 	print("Control + C")
 	return "ctrlC"

@@ -133,7 +133,9 @@
         var xhr = new XMLHttpRequest();
         console.log("ctrlC");
         xhr.open("POST", '/ctrlC', true);
-    }
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({ctrlC: ""}));   
+}
 
     document.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
