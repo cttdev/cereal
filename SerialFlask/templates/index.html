@@ -48,8 +48,8 @@
         } else {
             var main = document.createElement("h6");
 
-            var data = document.createElement("strong");
-            data.className = "strong";
+            var data = document.createElement("h6");
+            //data.className = "";
 
             if (event.data.includes("root@eero:~#")){
                 data.innerHTML = "<span style='color:orange;'>root@eero:~#</span>" + event.data.slice(12);
