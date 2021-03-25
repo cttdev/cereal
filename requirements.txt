@@ -10,7 +10,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 pyserial==3.4
-PyYAML==5.3
+PyYAML==5.4
 requests==2.23.0
 urllib3==1.25.8
 Werkzeug==1.0.0
